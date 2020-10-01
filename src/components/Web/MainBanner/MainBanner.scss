@@ -3,7 +3,7 @@
 .main-banner {
     position: relative;
     height: 500px;
-    background-image: url("../../../assets/img/jpg/home-v1.jpg");
+    background-image: url("../../../assets/img/jpg/background-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -35,4 +35,10 @@
             font-size: 24px;
         }
     }
+}
+
+strong {
+    color: #347295;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.74);
+
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Row, Col, Card, Button } from "antd";
 import { Link } from "react-router-dom";
-import reactJsHooks from "../../../assets/img/jpg/react-js-hooks.jpg";
-import reactNative from "../../../assets/img/jpg/react-native.jpg";
-import javaScript from "../../../assets/img/jpg/javascript-es6.jpg";
-import wordPress from "../../../assets/img/jpg/wordpress.jpg";
-import prestaShop from "../../../assets/img/jpg/prestashop-1-7.jpg";
-import cssGrid from "../../../assets/img/jpg/css-grid.jpg";
+import MongoDB from "../../../assets/img/png/mongoDB.png";
+import ExpressJS from "../../../assets/img/png/Express.png";
+import ReactJS from "../../../assets/img/png/react-logo.png";
+import Nodejs from "../../../assets/img/png/node-logo.png";
+import JavaScript from "../../../assets/img/png/javascript-logo.png";
+import Php from "../../../assets/img/png/php-logo.png";
 
 import "./HomeCourses.scss";
 
@@ -14,76 +14,49 @@ export default function HomeCourses() {
     return (
         <Row className="home-courses">
             <Col lg={24} className="home-courses__title" >
-                <h2>Aprende y mejora tus habilidades!</h2>
+                <h2>Some of the technologies I work with</h2>
             </Col>
             <Col lg={4} />
             <Col lg={16}>
                 <Row className="row-courses">
-
-                    <Col md={6}>
+                    <Col md={12}>
                         <CardCourse
-                            image={reactJsHooks}
-                            title="React JS Hooks"
-                            subtitle="Intermedio - React/JavaScript"
-                            link="https://courses.agustinnavarrogaldon.com/react"
+                            image={MongoDB}
+                            title="Express.js"
+                            subtitle="It's a web application framework for Node.JS"
+                            link=""
                         />
                     </Col>
 
-                    <Col md={6}>
+                    <Col md={12}>
                         <CardCourse
-                            image={reactNative}
-                            title="React Native Expo"
-                            subtitle="Intermedio - React/JavaScript"
+                            image={ExpressJS}
+                            title="Express.js"
+                            subtitle="It's a web application framework for Node.JS"
                             link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-                        />
-                    </Col>
-
-                    <Col md={6}>
-                        <CardCourse
-                            image={javaScript}
-                            title="JavaScript ES6"
-                            subtitle="Básico - JavaScript"
-                            link="https://courses.agustinnavarrogaldon.com/javascript"
-                        />
-                    </Col>
-
-                    <Col md={6}>
-                        <CardCourse
-                            image={wordPress}
-                            title="WordPress"
-                            subtitle="Básico - WordPress"
-                            link="https://courses.agustinnavarrogaldon.com/wordpress"
                         />
                     </Col>
                 </Row>
 
                 <Row className="row-courses">
-                    <Col md={6}>
+                    <Col md={12}>
                         <CardCourse
-                            image={prestaShop}
-                            title="PrestaShop 1.7"
-                            subtitle="Básico - PrestaShop"
-                            link="https://courses.agustinnavarrogaldon.com/prestashop"
-                        />
-                    </Col>
-                    <Col md={6} />
-                    <Col md={6} />
-                    <Col md={6}>
-                        <CardCourse
-                            image={cssGrid}
-                            title="CSS Grid"
-                            subtitle="Intermedio - CSS"
-                            link="https://courses.agustinnavarrogaldon.com/css-grid"
+                            image={ReactJS}
+                            title="React.js"
+                            subtitle="JavaScript framework for JavaScript"
+                            link="https://courses.agustinnavarrogaldon.com/javascript"
                         />
                     </Col>
 
+                    <Col md={12}>
+                        <CardCourse
+                            image={Nodejs}
+                            title="Node.js"
+                            subtitle=""
+                            link="https://courses.agustinnavarrogaldon.com/wordpress"
+                        />
+                    </Col>
                 </Row>
-            </Col>
-            <Col lg={4} />
-            <Col lg={24} className="home-courses__more">
-                <Link to="/courses">
-                    <Button>Ver más</Button>
-                </Link>
             </Col>
         </Row>
     )
@@ -96,9 +69,9 @@ function CardCourse(props) {
     return (
         <a href="{link}" garget="_blank" rel="noopener noreferrer">
             <Card
-                className="home-courses__card"
+                className="home-courses__card images"
                 cover={<img src={image} alt={title} />}
-                actions={[<Button>Ingresar</Button>]}
+            // actions={[<Button>Enter</Button>]}
             >
                 <Meta title={title} description={subtitle} />
             </Card>

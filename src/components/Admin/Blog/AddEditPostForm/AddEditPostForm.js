@@ -57,7 +57,7 @@ export default function AddEditPostForm(props) {
             })
             .catch(() => {
                 notification["error"]({
-                    message: "Error del servidor"
+                    message: "Server error"
                 })
             })
     }
@@ -76,7 +76,7 @@ export default function AddEditPostForm(props) {
             })
             .catch(() => {
                 notification["error"]({
-                    message: "Error del servidor"
+                    message: "Server error"
                 })
             })
     }

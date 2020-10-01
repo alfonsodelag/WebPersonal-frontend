@@ -10,6 +10,7 @@
     "@tinymce/tinymce-react": "^3.6.0",
     "antd": "^4.3.0",
     "jwt-decode": "^2.2.0",
+    "mini-create-react-context": "^0.4.0",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "query-string": "^6.13.1",
@@ -42,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://zealous-jepsen-0001cf.netlify.app/"
+  "homepage": "https://alfonsodelaguardia-portfolio.netlify.app/"
 }

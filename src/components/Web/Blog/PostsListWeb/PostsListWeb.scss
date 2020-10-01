@@ -11,6 +11,8 @@
 
     .post {
         color: $font-light;
+        display: flex;
+        justify-content: end;
 
         &__date {
             display: flex;
@@ -30,6 +32,11 @@
             &:hover {
                 color: $primary-color-dark;
             }
+        }
+
+        .blog-titles {
+            display: flex;
+            justify-content: flex-start;
         }
     }
 }

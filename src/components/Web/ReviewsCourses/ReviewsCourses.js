@@ -6,11 +6,12 @@ import "./ReviewCourses.scss";
 
 export default function ReviewsCourses() {
     return (
-        <Row className="reviews-courses">
-            <Row>
+        <Row className="reviews-courses ">
+            <Row className="width">
                 <Col lg={4} />
                 <Col lg={16} className="reviews-courses__title">
-                    <h2>Forma parte de los +35mil estudiantes que aprenden con mis cursos</h2>
+                    <h2>Forma parte de los +35MIL estudiantes que están aprendiendo
+                    con mis cursos</h2>
                 </Col>
                 <Col lg={4} />
             </Row>
@@ -63,13 +64,14 @@ export default function ReviewsCourses() {
                         </Col>
                         <Col md={8}>
                             <CardReview
-                                name=""
+                                name="Jaime R. Bravo"
                                 subtitle="Alumno de Alfonso"
                                 avatar={AvatarPersona}
                                 review="Me encantó el curso. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
                             />
                         </Col>
                     </Row>
+
                 </Col>
                 <Col lg={4} />
             </Row>

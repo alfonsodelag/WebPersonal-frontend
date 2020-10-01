@@ -3,7 +3,7 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import SocialLinks from "../Social Links";
 import { getMenuApi } from "../../../api/menu";
-import Logo from "../../../assets/img/png/logo.png";
+import Logo from "../../../assets/img/jpg/ADLG-logo2.png";
 
 import "./MenuTop.scss";
 
@@ -12,8 +12,10 @@ export default function MenuTop() {
 
     useEffect(() => {
         getMenuApi().then(response => {
+            console.log("response", response)
             const arrayMenu = [];
             response.menu.forEach(item => {
+                console.log("item", item)
                 item.active && arrayMenu.push(item)
             });
             setMenuData(arrayMenu);
@@ -30,7 +32,7 @@ export default function MenuTop() {
             </Menu.Item>
 
             {menuData.map(item => {
-                const external = item.url.indexOf("http") > -1 ? true : false;
+                const external = item.url.indexOf("http") === 0;
                 if (external) {
                     return (
                         <Menu.Item key={item._id} className="menu-top-web__item">
@@ -40,11 +42,10 @@ export default function MenuTop() {
                 }
                 return (
                     <Menu.Item key={item._id} className="menu-top-web__item" >
-                        <Link to={item.url}>{item.link}</Link>
+                        <Link to={item.url}>{item.title}</Link>
                     </Menu.Item>
                 )
             })}
-
             <SocialLinks />
         </Menu>
     )

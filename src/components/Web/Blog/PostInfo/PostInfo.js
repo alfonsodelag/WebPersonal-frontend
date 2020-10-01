@@ -14,23 +14,22 @@ export default function PostInfo(props) {
     console.log("postInfo :", postInfo);
 
     useEffect(() => {
-        if (url) {
-            getPostApi(url)
-                .then(response => {
-                    if (response.code !== 200) {
-                        notification["warning"]({
-                            message: response.message
-                        })
-                    } else {
-                        setPostInfo(response.post)
-                    }
-                })
-                .catch(() => {
+        getPostApi(url)
+            .then(response => {
+                if (response.code !== 200) {
                     notification["warning"]({
-                        message: "Error del servidor"
+                        message: response.message
                     })
+                } else {
+                    setPostInfo(response.post)
+                }
+            })
+            .catch(() => {
+                notification["warning"]({
+                    message: "Error del servidor"
                 })
-        }
+            })
+
     }, [url])
 
     if (!postInfo) {
@@ -43,22 +42,21 @@ export default function PostInfo(props) {
     return (
         <>
             <Helmet>
-                <title> {postInfo.title} | Alfonso De La Guardia </title>
+                <title>{postInfo.title} | Alfonso De La Guardia</title>
             </Helmet>
             <div className="post-info">
                 <h1 className="post-info__title">{postInfo.title}</h1>
-
                 <div className="post-info__creation-date">
                     {moment(postInfo.date)
                         .local("es")
                         .format("LL")}
                 </div>
 
-                <div className="post-info__description">
+                <div
+                    className="post-info__description"
                     dangerouslySetInnerHTML={{ __html: postInfo.description }}
-                </div>
-
+                />
             </div>
         </>
-    )
+    );
 }

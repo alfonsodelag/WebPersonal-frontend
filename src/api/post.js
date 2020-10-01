@@ -16,7 +16,7 @@ export function getPostsApi(limit, page) {
 }
 
 export function deletePostApi(token, id) {
-    const url = `${basePath}/${apiVersion}/delete-post/`;
+    const url = `${basePath}/${apiVersion}/delete-post/${id}`;
 
     const params = {
         method: "DELETE",
@@ -99,6 +99,4 @@ export function getPostApi(urlPost) {
         .catch(err => {
             return err;
         })
-
-
 }

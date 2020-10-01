@@ -13,7 +13,7 @@ export default function Newsletter() {
 
         if (!resultValidation) {
             notification["error"]({
-                message: "El correo electrónico no es válido."
+                message: "The e-mail address is valid."
             })
         } else {
             suscribeNewsletterApi(email).then(response => {
@@ -38,7 +38,7 @@ export default function Newsletter() {
                 <Form.Item>
                     <Input
                         prefix={<UserOutlined />}
-                        placeholder="Correo electrónico"
+                        placeholder="E-mail address"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />

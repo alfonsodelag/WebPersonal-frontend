@@ -1,82 +1,86 @@
 import React from 'react';
-import { Row, Col, Card } from "antd";
-import { UserOutlined } from '@ant-design/icons';
+import { Row, Col, Card, Button } from "antd";
+import { Link } from "react-router-dom";
+import MusicLibrary from "../../../assets/img/png/musiclibrary.png";
+import ExpressJS from "../../../assets/img/png/Express.png";
+import ReactJS from "../../../assets/img/png/react-logo.png";
+import Nodejs from "../../../assets/img/png/node-logo.png";
+import JavaScript from "../../../assets/img/png/javascript-logo.png";
+import Php from "../../../assets/img/png/php-logo.png";
 
-import "./HowMyCoursesWork.scss";
+// import "./HomeCourses.scss";
 
-export default function HowMyCoursesWork() {
+export default function HomeCourses() {
     return (
-        <Row className="how-my-courses-work">
-            <Col lg={24} className="how-my-courses-work__title">
-                <h2>Cómo funcionan mis cursos?</h2>
-                <h3>
-                    Cada curso cuenta con contenido bajo la web de Udemy, activa las 24
-                    horas al día, los 365 días del año
-                </h3>
+        <Row className="home-courses">
+            <Col lg={24} className="home-courses__title" >
+                <h2>My projects</h2>
             </Col>
-
             <Col lg={4} />
             <Col lg={16}>
-                <Row className="row-cards" >
-                    <Col md={8}>
-                        <CardInfo
-                            icon="clock-circle"
-                            title="Cursos y Clases"
-                            description="Cursos entre 10 y 30 horas al día"
+                <Row className="row-courses">
+                    <Col md={12}>
+                        <CardCourse
+                            image={MusicLibrary}
+                            title="Music Library"
+                            subtitle="A website to look for your favorite music!"
+                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
                         />
                     </Col>
-                    <Col md={8}>
-                        <CardInfo
-                            icon="key"
-                            title="Accceso 24/7"
-                            description="Accede en cualquier momento"
-                        />
-                    </Col>
-                    <Col md={8}>
-                        <CardInfo
-                            icon="message"
-                            title="Aprendizaje colaborativo"
-                            description="Aprende de los demás"
+
+                    <Col md={12}>
+                        <CardCourse
+                            image={ExpressJS}
+                            title="Express.js"
+                            subtitle="It's a web application framework for Node.JS"
+                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
                         />
                     </Col>
                 </Row>
 
-                <Row className="row-cards" >
-                    <Col md={8}>
-                        <CardInfo
-                            icon="user"
-                            title="Mejora tu perfil"
-                            description="Vuelve tu perfil más atractivo para las empresas"
+                <Row className="row-courses">
+                    <Col md={12}>
+                        <CardCourse
+                            image={MusicLibrary}
+                            title="Music Library"
+                            subtitle="A website to look for your favorite music!"
+                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
                         />
                     </Col>
-                    <Col md={8}>
-                        <CardInfo
-                            icon="dollar"
-                            title="Precios bajos"
-                            description="Precios accesibles para ti"
-                        />
-                    </Col>
-                    <Col md={8}>
-                        <CardInfo
-                            icon="message"
-                            title="Certificados de finalización"
-                            description="Demuestra que terminaste el curso"
+
+                    <Col md={12}>
+                        <CardCourse
+                            image={ExpressJS}
+                            title="Express.js"
+                            subtitle="It's a web application framework for Node.JS"
+                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
                         />
                     </Col>
                 </Row>
             </Col>
             <Col lg={4} />
+            <Col lg={24} className="home-courses__more">
+                <Link to="/courses">
+                    <Button>Ver más</Button>
+                </Link>
+            </Col>
         </Row>
     )
 }
 
-function CardInfo(props) {
-    const { title, description } = props;
+function CardCourse(props) {
+    const { image, title, subtitle, link } = props;
     const { Meta } = Card;
 
     return (
-        <Card className="how-my-courses-work__card">
-            <Meta title={title} description={description} />
-        </Card>
+        <a href="{link}" garget="_blank" rel="noopener noreferrer">
+            <Card
+                className="home-courses__card"
+                cover={<img src={image} alt={title} />}
+                actions={[<Button>Enter</Button>]}
+            >
+                <Meta title={title} description={subtitle} />
+            </Card>
+        </a>
     )
 }

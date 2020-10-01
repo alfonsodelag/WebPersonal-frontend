@@ -90,16 +90,18 @@ export default function MenuWebList(props) {
             okType: "danger",
             cancelText: "Cancelar",
             onOk() {
-                deleteMenuApi(accessToken, menu._id.then(response => {
-                    notification["success"]({
-                        message: response
-                    });
-                    setReloadMenuWeb(true);
-                })).catch(() => {
-                    notification["error"]({
-                        message: "Error del servidor, intentelo de nuevo"
+                deleteMenuApi(accessToken, menu._id)
+                    .then(response => {
+                        notification["success"]({
+                            message: response
+                        });
+                        setReloadMenuWeb(true);
                     })
-                })
+                    .catch(() => {
+                        notification["error"]({
+                            message: "Error del servidor, intentelo de nuevo"
+                        })
+                    })
             }
 
         })

@@ -70,7 +70,7 @@ function Post(props) {
 
 
     return (
-        <List.Item className="post">
+        <List.Item className="post justify-end">
             <div className="post__date">
                 <span>{day}</span>
                 <span>{month}</span>

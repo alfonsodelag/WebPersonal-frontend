@@ -8,6 +8,7 @@ import "./AddEditCourseForm.scss";
 
 export default function AddEditCourseForm(props) {
     const { setIsVisibleModal, setReloadCourses, course } = props;
+    // console.log(props);
     const [courseData, setCourseData] = useState({});
 
     // We use useEffect to obtain data from props and add them to State
@@ -17,7 +18,6 @@ export default function AddEditCourseForm(props) {
     }, [course])
 
     const addCourse = e => {
-        console.log("creando curso");
         console.log("courseData => ", courseData);
 
         if (!courseData.idCourse) {
@@ -29,19 +29,20 @@ export default function AddEditCourseForm(props) {
 
             addCourseApi(accessToken, courseData)
                 .then(response => {
-                    const typeNotification = response.code === 200 ? "success" : "warning";
-                    notification[typeNotification]({
-                        message: response.message
+                    // const typeNotification = response.code === 200 ? "success" : "warning";
+                    notification["success"]({
+                        message: "SUCCESS CREATING COURSE"
                     });
                     setIsVisibleModal(false);
                     setReloadCourses(true);
                     setCourseData({});
                 })
-                .catch(() => {
+                .catch((error) => {
+                    console.log(error);
                     notification["error"]({
-                        message: "Error del servidor. Intentelo mas tarde"
-                    })
-                })
+                        message: "CATCH ERROR"
+                    });
+                });
         }
     }
 

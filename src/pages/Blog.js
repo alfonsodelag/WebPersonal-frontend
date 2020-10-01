@@ -22,7 +22,7 @@ export default function Blog(props) {
             </Col>
             <Col md={4} />
         </Row>
-    )
+    );
 }
 
 

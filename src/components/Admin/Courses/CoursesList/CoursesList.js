@@ -22,10 +22,12 @@ export default function CoursesList(props) {
         const listCourseArray = [];
         courses.forEach(course => {
             listCourseArray.push({
-                content: (<Course
-                    course={course}
-                    deleteCourse={deleteCourse}
-                    editCourseModal={editCourseModal} />)
+                content: (
+                    <Course
+                        course={course}
+                        deleteCourse={deleteCourse}
+                        editCourseModal={editCourseModal} />
+                )
             });
         });
         setListCourses(listCourseArray)

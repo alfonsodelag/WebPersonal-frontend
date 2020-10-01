@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactComponent as YouTubeIcon } from "../../../assets/img/svg/youtube.svg";
-import { ReactComponent as TwitterIcon } from "../../../assets/img/svg/twitter.svg";
-import { ReactComponent as FacebookIcon } from "../../../assets/img/svg/facebook.svg";
+// import { ReactComponent as YouTubeIcon } from "../../../assets/img/svg/youtube.svg";
+// import { ReactComponent as TwitterIcon } from "../../../assets/img/svg/twitter.svg";
+import { ReactComponent as GithubIcon } from "../../../assets/img/svg/github.svg";
 import { ReactComponent as LinkedinIcon } from "../../../assets/img/svg/linkedin.svg";
 
 import "./SocialLinks.scss";
@@ -10,29 +10,14 @@ export default function SocialLinks() {
     return (
         <div className="social-links">
             <a
-                href="https://www.youtube.com/"
-                className="youtube"
+                href="https://www.github.com/alfonsodelag"
+                className="github"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <YouTubeIcon />
+                <GithubIcon />
             </a>
-            <a
-                href="https://twitter.com/"
-                className="twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <TwitterIcon />
-            </a>
-            <a
-                href="https://www.facebook.com/alfonsodelag"
-                className="facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FacebookIcon />
-            </a>
+
             <a
                 href="https://es.linkedin.com/in/alfonsodelaguardia"
                 className="linkedin"

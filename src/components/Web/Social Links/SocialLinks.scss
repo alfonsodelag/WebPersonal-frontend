@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
+    width: 10%;
 
     a {
         display: flex;
@@ -12,16 +12,8 @@
         padding: 5px 8px;
         border-radius: 5px;
 
-        &.youtube {
-            background-color: $youtube;
-        }
-
-        &.twitter {
-            background-color: $twitter;
-        }
-
-        &.facebook {
-            background-color: $facebook;
+        &.github {
+            background-color: lightgray;
         }
 
         &.linkedin {

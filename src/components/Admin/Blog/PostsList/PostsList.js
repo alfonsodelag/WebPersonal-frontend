@@ -56,7 +56,6 @@ function Post(props) {
 
     return (
         <List.Item
-
             actions={[
                 <Link to={`/blog/${post.url}`} target="_blank">
                     <Button type="primary">
@@ -72,7 +71,7 @@ function Post(props) {
                 </Button>
             ]}
         >
-            <List.Item.Meta title={post.title} />
+            <List.Item.Meta className="blog-titles" title={post.title} />
         </List.Item>
     )
 }
