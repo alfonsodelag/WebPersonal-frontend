@@ -8,13 +8,6 @@ export default function Contact() {
     return (
 
         <div className="login">
-            <Link to="/">
-                <img
-                    className="login__logo"
-                    src={Logo}
-                    alt=""
-                />
-            </Link>
 
             <div className="login__container">
                 <h1>Contact me</h1>
@@ -31,6 +24,6 @@ export default function Contact() {
                     {/* <button onClick={login} type="submit" className="login__signInButton">Sign In</button> */}
                 </form>
             </div>
-        </div>
+        </div >
     );
 }

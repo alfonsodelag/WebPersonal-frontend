@@ -24,7 +24,7 @@ export default function HomeCourses() {
                             image={MongoDB}
                             title="Express.js"
                             subtitle="It's a web application framework for Node.JS"
-                            link=""
+                            link="https://www.mongodb.com/"
                         />
                     </Col>
 
@@ -33,7 +33,7 @@ export default function HomeCourses() {
                             image={ExpressJS}
                             title="Express.js"
                             subtitle="It's a web application framework for Node.JS"
-                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
+                            link="https://expressjs.com/"
                         />
                     </Col>
                 </Row>
@@ -44,7 +44,7 @@ export default function HomeCourses() {
                             image={ReactJS}
                             title="React.js"
                             subtitle="JavaScript framework for JavaScript"
-                            link="https://courses.agustinnavarrogaldon.com/javascript"
+                            link="https://reactjs.org/"
                         />
                     </Col>
 
@@ -53,7 +53,7 @@ export default function HomeCourses() {
                             image={Nodejs}
                             title="Node.js"
                             subtitle=""
-                            link="https://courses.agustinnavarrogaldon.com/wordpress"
+                            link="https://nodejs.org/en/"
                         />
                     </Col>
                 </Row>
