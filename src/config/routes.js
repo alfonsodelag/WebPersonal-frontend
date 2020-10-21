@@ -15,6 +15,7 @@ import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Courses from '../pages/Courses';
 import Blog from '../pages/Blog';
+import Cv from '../pages/Cv';
 
 // Other
 import Error404 from '../pages/Error404';
@@ -73,6 +74,11 @@ const routes = [
             {
                 path: "/contact",
                 component: Contact,
+                exact: true
+            },
+            {
+                path: "/cv",
+                component: Cv,
                 exact: true
             },
             {

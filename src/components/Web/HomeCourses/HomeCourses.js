@@ -5,8 +5,6 @@ import MongoDB from "../../../assets/img/png/mongoDB.png";
 import ExpressJS from "../../../assets/img/png/Express.png";
 import ReactJS from "../../../assets/img/png/react-logo.png";
 import Nodejs from "../../../assets/img/png/node-logo.png";
-import JavaScript from "../../../assets/img/png/javascript-logo.png";
-import Php from "../../../assets/img/png/php-logo.png";
 
 import "./HomeCourses.scss";
 
@@ -14,45 +12,45 @@ export default function HomeCourses() {
     return (
         <Row className="home-courses">
             <Col lg={24} className="home-courses__title" >
-                <h2>Some of the technologies I work with</h2>
+                <h2>Some of my favorite technologies to work with</h2>
             </Col>
             <Col lg={4} />
             <Col lg={16}>
-                <Row className="row-courses">
-                    <Col md={12}>
+                <Row className="row-courses courses-list">
+                    <Col md={12} className="justify-center">
                         <CardCourse
                             image={MongoDB}
-                            title="Express.js"
-                            subtitle="It's a web application framework for Node.JS"
+                            title="MongoDB"
+                            subtitle="MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era."
                             link="https://www.mongodb.com/"
                         />
                     </Col>
 
-                    <Col md={12}>
+                    <Col md={12} className="justify-center">
                         <CardCourse
                             image={ExpressJS}
                             title="Express.js"
-                            subtitle="It's a web application framework for Node.JS"
+                            subtitle="Fast, unopinionated, minimalist web framework for Node.js"
                             link="https://expressjs.com/"
                         />
                     </Col>
                 </Row>
 
                 <Row className="row-courses">
-                    <Col md={12}>
+                    <Col md={12} className="justify-center">
                         <CardCourse
                             image={ReactJS}
                             title="React.js"
-                            subtitle="JavaScript framework for JavaScript"
+                            subtitle="A JavaScript library for building user interfaces"
                             link="https://reactjs.org/"
                         />
                     </Col>
 
-                    <Col md={12}>
+                    <Col md={12} className="justify-center">
                         <CardCourse
                             image={Nodejs}
                             title="Node.js"
-                            subtitle=""
+                            subtitle="Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."
                             link="https://nodejs.org/en/"
                         />
                     </Col>
@@ -67,7 +65,7 @@ function CardCourse(props) {
     const { Meta } = Card;
 
     return (
-        <a href="{link}" garget="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer">
             <Card
                 className="home-courses__card images"
                 cover={<img src={image} alt={title} />}

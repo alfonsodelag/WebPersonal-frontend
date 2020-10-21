@@ -20,9 +20,20 @@
             background-color: $linkedin;
         }
 
+        &.whatsapp{
+            background-color: #1AD03F;
+            color: white;
+        }
+
         svg {
             width: 15px;
             height: 20px;
         }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .social-links {
+        display: none;
     }
 }

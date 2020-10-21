@@ -53,7 +53,7 @@ export default function PostInfo(props) {
                 </div>
 
                 <div
-                    className="post-info__description"
+                    className="post-info__description white"
                     dangerouslySetInnerHTML={{ __html: postInfo.description }}
                 />
             </div>

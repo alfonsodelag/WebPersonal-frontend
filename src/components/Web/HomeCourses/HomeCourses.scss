@@ -12,6 +12,7 @@
             font-weight: bold;
             font-size: 32px;
             text-transform: uppercase;
+            margin-bottom: 40px;
         }
     }
 
@@ -32,6 +33,7 @@
 
         .ant-card-body {
             text-align: center;
+            height: 150px;
 
             .ant-card-meta-title,
             .ant-card-meta-description {
@@ -78,6 +80,12 @@
 }
 
 .images {
-    height: 300px;
-    width: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }

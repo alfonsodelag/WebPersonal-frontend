@@ -2,7 +2,7 @@
 
 .my-info {
     img {
-        width: 200px;
+        width: 150px;
         margin-bottom: 20px;
     }
 
@@ -15,4 +15,11 @@
     .social-links {
         justify-content: flex-start;
     }
+}
+
+.social-link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
 }

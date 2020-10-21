@@ -17,40 +17,42 @@ export default function NavigationFooter() {
     return (
         <Row className="navigation-footer">
             <Col>
-                <h3>Servicios ofrecidos para los usuarios</h3>
+                <h3>Services offered</h3>
             </Col>
 
-            <Col md={12}>
-                <RenderListLeft />
-            </Col>
-            <Col md={12}>
-                <RenderListRight />
-            </Col>
+            <div className="render-lists">
+                <Col md={12}>
+                    <RenderListLeft />
+                </Col>
+                <Col md={12}>
+                    <RenderListRight />
+                </Col>
+            </div>
         </Row>
     );
 }
 
 function RenderListLeft() {
     return (
-        <ul>
+        <ul className="services-list">
             <li>
                 <a href="#">
-                    <BookOutlined />Cursos Online
+                    <BookOutlined />Frontend Development
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <CodepenOutlined />Desarrollo Web
+                    <CodepenOutlined />React.js
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <DatabaseOutlined />Base de Datos
+                    <DatabaseOutlined />Vue.js
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <FolderViewOutlined /> Politica de Privacidad
+                    <FolderViewOutlined />CSS, SASS
                 </a>
             </li>
         </ul>
@@ -59,25 +61,25 @@ function RenderListLeft() {
 
 function RenderListRight() {
     return (
-        <ul>
+        <ul className="services-list">
             <li>
                 <a href="#">
-                    <HddOutlined /> Sistemas / Servidores
+                    <HddOutlined /> Backend Development
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <AppstoreOutlined /> CMS
+                    <AppstoreOutlined />Node.js
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <UserAddOutlined /> Portfolio
+                    <UserAddOutlined />Express.js
                 </a>
             </li>
             <li>
                 <a to="/contact">
-                    <FolderViewOutlined /> Política de Cookies
+                    <FolderViewOutlined />MongoDB
                 </a>
             </li>
         </ul>

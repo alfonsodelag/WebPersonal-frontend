@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { MenuFoldOutlined, PoweroffOutlined } from '@ant-design/icons';
-import Logo from '../../../assets/img/jpg/ADLG-logo2.png';
+import Logo from '../../../assets/img/jpg/ADLG-Logo.jpg';
 import { logout } from '../../../api/auth';
 
 import './MenuTop.scss';

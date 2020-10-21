@@ -1,9 +1,10 @@
 @import "../../../scss/index.scss";
 
 .menu-top-web {
-    position: sticky;
+    position: sticky !important;
+    z-index: 3;
     top: 0;
-    background-color: $background-dark-web;
+    background-color: #181818;
     border: 0;
     display: flex;
     justify-content: space-between;
@@ -26,8 +27,8 @@
         padding: 10px;
 
         img {
-            width: 100px;
-            height: 60px;
+            width: 75px;
+            height: 82.5px;
         }
     }
 }

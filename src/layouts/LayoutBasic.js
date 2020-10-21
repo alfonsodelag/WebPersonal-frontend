@@ -16,7 +16,7 @@ export default function LayoutBasic(props) {
         <>
             <Row>
                 <Col lg={4} />
-                <Col lg={16}>
+                <Col className="MenuTop" lg={24}>
                     <MenuTop />
                 </Col>
                 <Col lg={4} />

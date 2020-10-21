@@ -3,12 +3,18 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import SocialLinks from "../Social Links";
 import { getMenuApi } from "../../../api/menu";
-import Logo from "../../../assets/img/jpg/ADLG-logo2.png";
+import Logo from "../../../assets/img/jpg/ADLG-Logo.jpg";
 
 import "./MenuTop.scss";
 
 export default function MenuTop() {
+
     const [menuData, setMenuData] = useState([]);
+    // const [isOpen, setIsOpen] = useState([]);
+
+    // handleToggle = () => {
+    //     this.setState({ isOpen: !this.state.isOpen })
+    // }
 
     useEffect(() => {
         getMenuApi().then(response => {
@@ -27,7 +33,7 @@ export default function MenuTop() {
         <Menu className="menu-top-web" mode="horizontal">
             <Menu.Item className="menu-top-web__logo">
                 <Link to={"/"}>
-                    <img src={Logo} alt="Logo2" />
+                    <img src={Logo} className="" alt="Logo2" />
                 </Link>
             </Menu.Item>
 

@@ -1,14 +1,14 @@
 import React from 'react';
-import AcademyLogo from "../../../../assets/img/png/academy-logo.png";
+import ADLGLogo from "../../../../assets/img/jpg/ADLG-Logo.jpg";
 
 import "./PresentationCourses.scss";
 
 export default function PresentationCourses() {
     return (
         <div className="presentation-courses">
-            <img src={AcademyLogo} alt="Cursos de Alfonso" />
-            <p>En esta academia as a encontrar los mejores cursos online sobre desarrollo web</p>
-            <p>Echales un vistazo y aprovecha las ofertas!</p>
+            <img src={ADLGLogo} alt="Alfonso's projects" />
+            <p>Here you will find more information about the Projects I've been working on</p>
+            <p>Check them out! I'm sure you'll find them fun and interesting!</p>
         </div>
     )
 }

@@ -16,8 +16,8 @@ export default function Home() {
                     data-react-helmet="true" />
             </Helmet>
             <MainBanner />
-            <HomeCourses />
             <HowMyCoursesWork />
+            <HomeCourses />
             <ReviewCourses />
         </>
     );

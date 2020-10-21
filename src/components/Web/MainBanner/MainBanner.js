@@ -13,8 +13,9 @@ export default function MainBanner() {
 
                 </Col>
                 <Col lg={16}>
-                    <h2>
-                        Hello, I'm <strong>Alfonso De La Guardia.</strong><br /> I'm a full-stack web developer.
+                    <h2 className="main-banner__title">
+                        Hello, I'm Alfonso De La Guardia.<br />
+                        I'm a full-stack web developer.
                     </h2>
                 </Col>
                 <Col lg={4} />

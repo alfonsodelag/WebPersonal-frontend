@@ -29,10 +29,10 @@ export default function Courses() {
     return (
         <>
             <Helmet>
-                <title>Cursos | Alfonso De La Guardia </title>
+                <title>Projects | Alfonso De La Guardia </title>
                 <meta
                     name="description"
-                    content="Cursos | Web sobre programación de Alfonso De La Guardia"
+                    content="Projects | My latest projects "
                     data-react-helmet="true"
                 />
             </Helmet>
@@ -42,7 +42,7 @@ export default function Courses() {
                     <PresentationCourses />
                     {!courses ? (
                         <Spin
-                            tip="Cargando cursos"
+                            tip="Loading projects"
                             style={{ textAlign: "center", width: "100%", padding: "20px" }}
                         />
                     ) : (

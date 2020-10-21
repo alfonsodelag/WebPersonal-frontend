@@ -1,14 +1,12 @@
 import React from 'react';
 import { Row, Col, Card, Button } from "antd";
 import { Link } from "react-router-dom";
-import MusicLibrary from "../../../assets/img/png/musiclibrary.png";
-import ExpressJS from "../../../assets/img/png/Express.png";
-import ReactJS from "../../../assets/img/png/react-logo.png";
-import Nodejs from "../../../assets/img/png/node-logo.png";
-import JavaScript from "../../../assets/img/png/javascript-logo.png";
-import Php from "../../../assets/img/png/php-logo.png";
+import WhatsApp from "../../../assets/img/png/WHATSAPP.PNG";
+import Instagram from "../../../assets/img/png/INSTAGRAM.PNG";
+import Amazon from "../../../assets/img/png/AMAZON.PNG";
+import BeachResort from "../../../assets/img/png/BEACHRESORT.PNG";
 
-// import "./HomeCourses.scss";
+import "./HowMyCoursesWork.scss";
 
 export default function HomeCourses() {
     return (
@@ -20,49 +18,57 @@ export default function HomeCourses() {
             <Col lg={16}>
                 <Row className="row-courses">
                     <Col md={12}>
-                        <CardCourse
-                            image={MusicLibrary}
-                            title="Music Library"
-                            subtitle="A website to look for your favorite music!"
-                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-                        />
+                        <a href="https://whatsapp-mern-bbe12.web.app/">
+                            <CardCourse
+                                image={WhatsApp}
+                                title="Chat Rooms Project (MERN Stack)"
+                                subtitle="A webapp similar to WhatsApp where you can chat with others and create your own room. 
+                                Project created with: MongoDB, Express.Js, React.js, Node.js, Google Firebase, Material-ui, Heroku"
+                            />
+                        </a>
                     </Col>
 
                     <Col md={12}>
-                        <CardCourse
-                            image={ExpressJS}
-                            title="Express.js"
-                            subtitle="It's a web application framework for Node.JS"
-                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-                        />
+                        <a href="https://instagram-clone-react-ed5a4.web.app/">
+                            <CardCourse
+                                image={Instagram}
+                                title="Social Media Project (MERN Stack)"
+                                subtitle="A Social Media webapp similar to Instagram where you can upload your favorite images.
+                                Project created with: MongoDB, Express.Js, React.js, Node.js, Google Firebase, Material-ui, Heroku"
+                            />
+                        </a>
                     </Col>
                 </Row>
 
                 <Row className="row-courses">
                     <Col md={12}>
-                        <CardCourse
-                            image={MusicLibrary}
-                            title="Music Library"
-                            subtitle="A website to look for your favorite music!"
-                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-                        />
+                        <a href="https://clone-8a0d8.web.app/">
+                            <CardCourse
+                                image={Amazon}
+                                title="eCommerce Project"
+                                subtitle="A website similar to Amazon where you can choose from a number of products.
+                                Project created with: ReactJs, Google Firebase, Axios, Material-ui"
+                            />
+                        </a>
                     </Col>
 
                     <Col md={12}>
-                        <CardCourse
-                            image={ExpressJS}
-                            title="Express.js"
-                            subtitle="It's a web application framework for Node.JS"
-                            link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-                        />
+                        <a href="https://beach-resort-alfonsodelaguardia.netlify.app/services">
+                            <CardCourse
+                                image={BeachResort}
+                                title="Beach Resort Project"
+                                subtitle="A website where you can choose you're favorite room for your holidays.
+                                Project created with: ReactJs, Google Firebase, Axios, Material-ui"
+                            />
+                        </a>
                     </Col>
                 </Row>
             </Col>
             <Col lg={4} />
-            <Col lg={24} className="home-courses__more">
-                <Link to="/courses">
-                    <Button>Ver más</Button>
-                </Link>
+            <Col lg={24} className="home-courses__more see-more">
+                {/* <Link to="/courses">
+                    <Button>See more</Button>
+                </Link> */}
             </Col>
         </Row>
     )
@@ -73,11 +79,10 @@ function CardCourse(props) {
     const { Meta } = Card;
 
     return (
-        <a href="{link}" garget="_blank" rel="noopener noreferrer">
+        <a href={link} garget="_blank" rel="noopener noreferrer">
             <Card
                 className="home-courses__card"
                 cover={<img src={image} alt={title} />}
-                actions={[<Button>Enter</Button>]}
             >
                 <Meta title={title} description={subtitle} />
             </Card>
