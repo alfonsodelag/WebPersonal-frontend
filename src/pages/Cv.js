@@ -37,7 +37,7 @@ export default function Cv() {
                         </div>
 
                         <div class="sectionContent">
-                            <p>Coming from a background in Business Administration, I decided to become a developer, since I've always been interested in software and technological solutions and the business opportunities these offer. I am now a FullStack JavaScript Developer, with excellent soft skills and teamwork abilities. I am passionate about programming and developing my professional career. I believe perseverance, enthusiasm and team-work are the key to developing good projects..</p>
+                            <p>Coming from a background in Business Administration, I decided to become a developer, since I've always been interested in software and technological solutions and the business opportunities these offer. I am now a FullStack JavaScript Developer, with excellent soft skills and teamwork abilities. I am passionate about programming and developing my professional career. I believe perseverance, enthusiasm and team-work are the key to developing high quality projects.</p>
                         </div>
                     </article>
                     <div class="clear"></div>
@@ -89,19 +89,17 @@ export default function Cv() {
                         <ul class="keySkills">
                             <li>Bilingual</li>
                             <li>Fast-learner</li>
+                            <li>Creative</li>
                             <li>Driven</li>
                             <li>Collaborative</li>
                             <li>Team Worker</li>
-                            <li>Creative</li>
                             <li>Hard Working</li>
-                            <li>Creative</li>
                             <li>Perseverance</li>
                             <li>Enthusiastic</li>
                         </ul>
                     </div>
                     <div class="clear"></div>
                 </section>
-
 
                 <section>
                     <div class="sectionTitle">
@@ -125,6 +123,5 @@ export default function Cv() {
                 </section>
             </div>
         </div>
-
     );
 }

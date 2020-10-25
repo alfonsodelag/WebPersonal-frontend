@@ -57,7 +57,7 @@ export default function HomeCourses() {
                             <CardCourse
                                 image={BeachResort}
                                 title="Beach Resort Project"
-                                subtitle="A website where you can choose you're favorite room for your holidays.
+                                subtitle="A website where you can choose your favorite room for your holidays.
                                 Project created with: ReactJs, Google Firebase, Axios, Material-ui"
                             />
                         </a>

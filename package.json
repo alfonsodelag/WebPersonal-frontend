@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@tinymce/tinymce-react": "^3.6.0",
     "antd": "^4.3.0",
+    "emailjs-com": "^2.6.3",
     "jwt-decode": "^2.2.0",
     "mini-create-react-context": "^0.4.0",
     "moment": "^2.27.0",

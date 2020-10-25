@@ -2,6 +2,7 @@
 
 .posts-list-web {
     margin: 50px 0;
+    text-align: center;
 
     >h1 {
         text-align: center;
@@ -39,5 +40,11 @@
             display: flex;
             justify-content: flex-start;
         }
+    }
+}
+
+@media screen and (max-width: 780px){
+    .posts-list-web__date {
+        margin-right: 10px;
     }
 }

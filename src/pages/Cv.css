@@ -113,6 +113,7 @@ p {
     max-width: 800px;
     background: #f3f3f3;
     margin: 30px auto;
+    margin-top: 200px;
 }
 
 .mainDetails {
@@ -456,4 +457,11 @@ section:last-child {
 article {
     margin-bottom: 30px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 780px){
+    #cv {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
 }

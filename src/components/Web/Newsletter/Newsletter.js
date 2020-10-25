@@ -49,7 +49,7 @@ export default function Newsletter() {
                         htmlType="submit"
                         className="login-form-button"
                     >
-                        Contáctame
+                        Contact Me
                     </Button>
                 </Form.Item>
             </Form>

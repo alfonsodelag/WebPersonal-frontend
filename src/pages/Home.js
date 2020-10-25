@@ -18,7 +18,7 @@ export default function Home() {
             <MainBanner />
             <HowMyCoursesWork />
             <HomeCourses />
-            <ReviewCourses />
+            {/* <ReviewCourses /> */}
         </>
     );
 }
