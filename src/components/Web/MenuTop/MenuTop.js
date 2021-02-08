@@ -3,20 +3,19 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import SocialLinks from "../Social Links";
 import { getMenuApi } from "../../../api/menu";
-import Logo from "../../../assets/img/jpg/ADLG-Logo.jpg";
+import Logo from "../../../assets/img/jpg/ADLG-logo.jpg";
 
 import "./MenuTop.scss";
 
 export default function MenuTop() {
 
     const [menuData, setMenuData] = useState([]);
-    // const [isOpen, setIsOpen] = useState([]);
-
-    // handleToggle = () => {
-    //     this.setState({ isOpen: !this.state.isOpen })
-    // }
 
     useEffect(() => {
+        const menuItems = localStorage.getItem("menu");
+        if (menuItems) {
+            setMenuData(JSON.parse(menuItems));
+        }
         getMenuApi().then(response => {
             console.log("response", response)
             const arrayMenu = [];
@@ -25,6 +24,7 @@ export default function MenuTop() {
                 item.active && arrayMenu.push(item)
             });
             setMenuData(arrayMenu);
+            localStorage.setItem("menu", JSON.stringify(arrayMenu))
         })
     }, []);
 

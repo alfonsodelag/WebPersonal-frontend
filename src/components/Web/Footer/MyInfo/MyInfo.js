@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../../../assets/img/jpg/ADLG-Logo.jpg';
+import Logo from '../../../../assets/img/jpg/ADLG-logo.jpg';
 import SocialLink from '../../Social Links'
 
 import "./MyInfo.scss";

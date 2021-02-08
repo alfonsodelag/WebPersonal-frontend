@@ -6,6 +6,8 @@ import WhatsApp from "../../../../assets/img/png/WHATSAPP.PNG";
 import Instagram from "../../../../assets/img/png/INSTAGRAM.PNG";
 import Amazon from "../../../../assets/img/png/AMAZON.PNG";
 import BeachResort from "../../../../assets/img/png/BEACHRESORT.PNG";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "./CoursesList.scss";
 
@@ -14,16 +16,20 @@ function CoursesList({ courses }) {
     const [courseInfo, setCourseInfo] = useState({});
     const [urlCourse, setUrlCourse] = useState("");
 
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
-        <Row className="home-courses">
+        <Row Row className="home-courses" >
             <Col lg={24} className="home-courses__title" >
-                <h2>My projects</h2>
+                <h2 className="hello" data-aos="fade-down-right" >My projects</h2>
             </Col>
             <Col lg={4} />
             <Col lg={16}>
-                <Row className="row-courses">
+                <Row className="row-courses" >
                     <Col md={12}>
-                        <a href="https://whatsapp-mern-bbe12.web.app/">
+                        <a href="https://whatsapp-mern-bbe12.web.app/" data-aos="flip-left">
                             <CardCourse
                                 image={WhatsApp}
                                 title="Chat Rooms Project"
@@ -43,10 +49,11 @@ function CoursesList({ courses }) {
                     </Col>
                 </Row>
 
-                <Row className="row-courses">
+                <Row className="row-courses" >
                     <Col md={12}>
                         <a href="https://clone-8a0d8.web.app/">
                             <CardCourse
+                                data-aos="flip-left"
                                 image={Amazon}
                                 title="eCommerce Project"
                                 subtitle="A website similar to Amazon where you can choose from a number of products "
@@ -71,7 +78,7 @@ function CoursesList({ courses }) {
                     <Button>See more</Button>
                 </Link> */}
             </Col>
-        </Row>
+        </Row >
     )
 }
 

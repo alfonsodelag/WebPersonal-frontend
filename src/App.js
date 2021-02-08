@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './config/routes';
 import AuthProvider from './providers/AuthProvider';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import './App.scss';
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <AuthProvider>
       <Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ADLGLogo from "../../../../assets/img/jpg/ADLG-Logo.jpg";
+import ADLGLogo from "../../../../assets/img/jpg/ADLG-logo.jpg";
 
 import "./PresentationCourses.scss";
 
